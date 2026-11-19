@@ -36,9 +36,8 @@
     </main>
 
     <footer class="footer-rebuild py-4">
-        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <div class="container text-center">
             <p class="mb-0">rebuild. Hardware hecho para durar.</p>
-            <p class="mb-0">Proyecto final, Programación para Internet</p>
         </div>
     </footer>
 

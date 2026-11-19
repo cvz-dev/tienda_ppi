@@ -57,6 +57,55 @@ main {
     color: var(--hueso);
 }
 
+/* Botones */
+.btn-musgo {
+    background-color: var(--musgo);
+    border-color: var(--musgo);
+    color: var(--hueso);
+}
+
+.btn-musgo:hover {
+    background-color: var(--musgo-oscuro);
+    border-color: var(--musgo-oscuro);
+    color: var(--hueso);
+}
+
+.btn-outline-carbon {
+    border-color: var(--carbon);
+    color: var(--carbon);
+}
+
+.btn-outline-carbon:hover {
+    background-color: var(--carbon);
+    color: var(--hueso);
+}
+
+/* Portada */
+.hero {
+    padding: 5rem 0;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.etiqueta {
+    color: var(--laton);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: var(--hueso);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+}
+
 /* Footer */
 .footer-rebuild {
     background-color: var(--carbon);

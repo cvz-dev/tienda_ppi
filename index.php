@@ -31,14 +31,51 @@
         </div>
     </nav>
 
-    <main class="container py-5">
-        <h1>Inicio</h1>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <p class="etiqueta">Hardware modular</p>
+                        <h1>Arma la tuya. Repárala. Mejórala.</h1>
+                        <p class="lead mt-3">
+                            Laptops, PCs y teléfonos hechos por módulos. Tú decides qué cambiar,
+                            cuándo cambiarlo y cómo se ve.
+                        </p>
+                        <a class="btn btn-musgo btn-lg mt-2" href="catalogo.php">Ver catálogo</a>
+                        <a class="btn btn-outline-carbon btn-lg mt-2 ms-2" href="#">Crear cuenta</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container pb-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="tarjeta p-4 h-100">
+                        <h3>Laptops</h3>
+                        <p class="mb-0">Pantalla, puertos, teclado y batería intercambiables.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tarjeta p-4 h-100">
+                        <h3>PCs</h3>
+                        <p class="mb-0">Gabinetes y componentes para armar desde cero.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tarjeta p-4 h-100">
+                        <h3>Teléfonos</h3>
+                        <p class="mb-0">Pantalla, cámara y batería que puedes reemplazar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer-rebuild py-4">
-        <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+        <div class="container text-center">
             <p class="mb-0">rebuild. Hardware hecho para durar.</p>
-            <p class="mb-0">Proyecto final, Programación para Internet</p>
         </div>
     </footer>
 
