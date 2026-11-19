@@ -1,0 +1,64 @@
+/* Rebuild - estilos generales */
+
+:root {
+    --arena: #F2EDE4;
+    --hueso: #FAF7F2;
+    --carbon: #23211E;
+    --musgo: #4F5D3A;
+    --musgo-oscuro: #3E4A2D;
+    --laton: #B08D57;
+    --borde: #E2DBCE;
+
+    /* Se sobrescriben variables de Bootstrap para usar la paleta */
+    --bs-body-bg: var(--arena);
+    --bs-body-color: var(--carbon);
+    --bs-body-font-family: "Inter", sans-serif;
+    --bs-link-color: var(--musgo);
+    --bs-link-hover-color: var(--musgo-oscuro);
+    --bs-border-color: var(--borde);
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar-rebuild {
+    background-color: var(--carbon);
+}
+
+.navbar-rebuild .navbar-brand {
+    color: var(--hueso);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.navbar-rebuild .navbar-brand span {
+    color: var(--laton);
+}
+
+.navbar-rebuild .nav-link {
+    color: #CFC8BB;
+}
+
+.navbar-rebuild .nav-link:hover,
+.navbar-rebuild .nav-link.active {
+    color: var(--hueso);
+}
+
+/* Footer */
+.footer-rebuild {
+    background-color: var(--carbon);
+    color: #CFC8BB;
+}
