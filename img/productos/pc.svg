@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F2EDE4"/>
+  <rect x="290" y="110" width="220" height="340" rx="14" fill="#23211E"/>
+  <rect x="312" y="135" width="176" height="40" rx="4" fill="#4F5D3A"/>
+  <rect x="312" y="190" width="176" height="40" rx="4" fill="#4F5D3A"/>
+  <circle cx="400" cy="340" r="58" fill="none" stroke="#B08D57" stroke-width="10"/>
+  <circle cx="400" cy="340" r="14" fill="#B08D57"/>
+  <text x="400" y="520" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#23211E">PC modular</text>
+</svg>

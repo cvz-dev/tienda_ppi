@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F2EDE4"/>
+  <rect x="210" y="150" width="380" height="240" rx="14" fill="#23211E"/>
+  <rect x="228" y="168" width="344" height="204" rx="4" fill="#4F5D3A"/>
+  <path d="M160 400 H640 L610 440 H190 Z" fill="#23211E"/>
+  <rect x="360" y="410" width="80" height="10" rx="5" fill="#B08D57"/>
+  <text x="400" y="520" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#23211E">Laptop modular</text>
+</svg>
