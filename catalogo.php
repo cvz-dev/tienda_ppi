@@ -48,11 +48,12 @@
 
                 while ($row = mysqli_fetch_array($resultado)) {
                     echo "<div class='col'>";
-                    echo "<div class='tarjeta producto h-100'>";
+                    echo "<div class='tarjeta producto h-100 position-relative'>";
                     echo "<img src='" . htmlspecialchars($row['foto']) . "' class='producto-foto' alt='" . htmlspecialchars($row['nombre']) . "'>";
                     echo "<div class='p-3'>";
                     echo "<p class='producto-fabricante mb-1'>" . htmlspecialchars($row['fabricante']) . "</p>";
-                    echo "<h2 class='producto-nombre'>" . htmlspecialchars($row['nombre']) . "</h2>";
+                    // stretched-link hace que toda la tarjeta sea clic hacia el detalle
+                    echo "<h2 class='producto-nombre'><a class='stretched-link' href='producto.php?id=" . $row['id_producto'] . "'>" . htmlspecialchars($row['nombre']) . "</a></h2>";
                     echo "<p class='producto-precio mb-2'>$" . number_format($row['precio'], 2) . " MXN</p>";
 
                     if ($row['cantidad_almacen'] > 0) {

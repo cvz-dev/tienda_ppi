@@ -15,6 +15,8 @@
     --bs-body-font-family: "Inter", sans-serif;
     --bs-link-color: var(--musgo);
     --bs-link-hover-color: var(--musgo-oscuro);
+    --bs-link-color-rgb: 79, 93, 58;
+    --bs-link-hover-color-rgb: 62, 74, 45;
     --bs-border-color: var(--borde);
 }
 
@@ -109,6 +111,9 @@ main {
 /* Productos del catálogo */
 .producto {
     overflow: hidden;
+    /* Borde de 2px desde el inicio para que al pasar el mouse solo cambie de color */
+    border-width: 2px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
 .producto-foto {
@@ -131,6 +136,17 @@ main {
     font-weight: 700;
 }
 
+.producto-nombre a {
+    color: var(--carbon);
+    text-decoration: none;
+}
+
+.producto:hover {
+    border-color: var(--laton);
+    box-shadow: 0 8px 20px rgba(35, 33, 30, 0.08);
+    transform: translateY(-3px);
+}
+
 .producto-precio {
     font-weight: 600;
 }
@@ -141,6 +157,43 @@ main {
 
 .badge-agotado {
     background-color: var(--carbon);
+}
+
+/* Detalle de producto */
+.enlace-volver {
+    color: var(--musgo);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.enlace-volver:hover {
+    color: var(--musgo-oscuro);
+    text-decoration: underline;
+}
+
+.detalle-foto {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.detalle-nombre {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+}
+
+.detalle-precio {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.detalle-ficha {
+    --bs-table-bg: transparent;
+}
+
+.detalle-ficha th {
+    width: 40%;
+    font-weight: 600;
 }
 
 /* Footer */
