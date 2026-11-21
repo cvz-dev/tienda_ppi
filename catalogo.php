@@ -32,7 +32,43 @@
     </nav>
 
     <main class="container py-5">
-        <h1>Catálogo</h1>
+        <p class="etiqueta mb-1">Hardware modular</p>
+        <h1 class="mb-4">Catálogo</h1>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            <?php
+                $con = mysqli_connect("db", "root", "root_password", "tienda_ppi");
+
+                if (mysqli_connect_errno()) {
+                    echo "<p>Error al conectar con MySQL: " . mysqli_connect_error() . "</p>";
+                }
+
+                $sql = "SELECT id_producto, nombre, foto, precio, cantidad_almacen, fabricante FROM productos ORDER BY id_producto;";
+                $resultado = mysqli_query($con, $sql);
+
+                while ($row = mysqli_fetch_array($resultado)) {
+                    echo "<div class='col'>";
+                    echo "<div class='tarjeta producto h-100'>";
+                    echo "<img src='" . htmlspecialchars($row['foto']) . "' class='producto-foto' alt='" . htmlspecialchars($row['nombre']) . "'>";
+                    echo "<div class='p-3'>";
+                    echo "<p class='producto-fabricante mb-1'>" . htmlspecialchars($row['fabricante']) . "</p>";
+                    echo "<h2 class='producto-nombre'>" . htmlspecialchars($row['nombre']) . "</h2>";
+                    echo "<p class='producto-precio mb-2'>$" . number_format($row['precio'], 2) . " MXN</p>";
+
+                    if ($row['cantidad_almacen'] > 0) {
+                        echo "<span class='badge badge-disponible'>" . $row['cantidad_almacen'] . " disponibles</span>";
+                    } else {
+                        echo "<span class='badge badge-agotado'>Agotado</span>";
+                    }
+
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</div>";
+                }
+
+                mysqli_close($con);
+            ?>
+        </div>
     </main>
 
     <footer class="footer-rebuild py-4">
