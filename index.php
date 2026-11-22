@@ -71,6 +71,45 @@
                 </div>
             </div>
         </section>
+
+        <section class="container pb-5">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <p class="etiqueta mb-1">Del catálogo</p>
+                    <h2 class="mb-0">Destacados</h2>
+                </div>
+                <a class="enlace-simple" href="catalogo.php">Ver todo &rarr;</a>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                <?php
+                    $con = mysqli_connect("db", "root", "root_password", "tienda_ppi");
+
+                    if (mysqli_connect_errno()) {
+                        echo "<p>Error al conectar con MySQL: " . mysqli_connect_error() . "</p>";
+                    }
+
+                    // Cuatro productos con existencias, elegidos al azar en cada visita
+                    $sql = "SELECT id_producto, nombre, foto, precio, cantidad_almacen, fabricante FROM productos WHERE cantidad_almacen > 0 ORDER BY RAND() LIMIT 4;";
+                    $resultado = mysqli_query($con, $sql);
+
+                    while ($row = mysqli_fetch_array($resultado)) {
+                        echo "<div class='col'>";
+                        echo "<div class='tarjeta producto h-100 position-relative'>";
+                        echo "<img src='" . htmlspecialchars($row['foto']) . "' class='producto-foto' alt='" . htmlspecialchars($row['nombre']) . "'>";
+                        echo "<div class='p-3'>";
+                        echo "<p class='producto-fabricante mb-1'>" . htmlspecialchars($row['fabricante']) . "</p>";
+                        echo "<h3 class='producto-nombre'><a class='stretched-link' href='producto.php?id=" . $row['id_producto'] . "'>" . htmlspecialchars($row['nombre']) . "</a></h3>";
+                        echo "<p class='producto-precio mb-0'>$" . number_format($row['precio'], 2) . " MXN</p>";
+                        echo "</div>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+
+                    mysqli_close($con);
+                ?>
+            </div>
+        </section>
     </main>
 
     <footer class="footer-rebuild py-4">

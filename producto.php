@@ -63,7 +63,7 @@
     </nav>
 
     <main class="container py-5">
-        <a class="enlace-volver d-inline-block mb-4" href="catalogo.php">&larr; Volver al catálogo</a>
+        <a class="enlace-simple d-inline-block mb-4" href="catalogo.php">&larr; Volver al catálogo</a>
 
         <?php if ($producto) { ?>
             <div class="row g-5">
