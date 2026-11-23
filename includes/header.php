@@ -25,7 +25,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#">Carrito</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Iniciar sesión</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Crear cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link <?php if ($pagina == "registro") echo "active"; ?>" href="registro.php">Crear cuenta</a></li>
                 </ul>
             </div>
         </div>

@@ -16,7 +16,7 @@
                             cuándo cambiarlo y cómo se ve.
                         </p>
                         <a class="btn btn-musgo btn-lg mt-2" href="catalogo.php">Ver catálogo</a>
-                        <a class="btn btn-outline-carbon btn-lg mt-2 ms-2" href="#">Crear cuenta</a>
+                        <a class="btn btn-outline-carbon btn-lg mt-2 ms-2" href="registro.php">Crear cuenta</a>
                     </div>
                 </div>
             </div>
