@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     $titulo = "Contacto";
     $pagina = "contacto";
     include "includes/header.php";

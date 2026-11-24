@@ -111,7 +111,6 @@ main {
 /* Productos del catálogo */
 .producto {
     overflow: hidden;
-    /* Borde de 2px desde el inicio para que al pasar el mouse solo cambie de color */
     border-width: 2px;
     transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
@@ -221,4 +220,16 @@ main {
 .form-select:focus {
     border-color: var(--laton);
     box-shadow: 0 0 0 0.2rem rgba(176, 141, 87, 0.25);
+}
+
+/* Icono de perfil del usuario con sesión */
+.navbar-rebuild .icono-cuenta {
+    display: flex;
+    align-items: center;
+    color: var(--laton);
+}
+
+.navbar-rebuild .icono-cuenta:hover,
+.navbar-rebuild .icono-cuenta.active {
+    color: var(--hueso);
 }

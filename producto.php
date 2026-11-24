@@ -1,5 +1,6 @@
 <?php
-    // Se busca el producto antes de mostrar la página para poder usar su nombre en el título
+    session_start();
+
     $producto = null;
 
     if (isset($_GET['id'])) {
